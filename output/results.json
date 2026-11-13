@@ -1,0 +1,91 @@
+{
+  "dataset": {
+    "rows": 150,
+    "train_rows": 120,
+    "test_rows": 30,
+    "classes": [
+      "Iris-setosa",
+      "Iris-versicolor",
+      "Iris-virginica"
+    ]
+  },
+  "timing_repeats": 10,
+  "bagging_prediction_matrix_shape": [
+    5,
+    30
+  ],
+  "boosting_rounds": [
+    {
+      "model": "k-NN",
+      "error": 0.09999999999999999,
+      "alpha": 1.0986122886681098,
+      "skipped": false
+    },
+    {
+      "model": "Decision Tree",
+      "error": 0.08333333333333334,
+      "alpha": 1.1989476363991851,
+      "skipped": false
+    },
+    {
+      "model": "Naive Bayes",
+      "error": 0.07323232323232323,
+      "alpha": 1.269033009034048,
+      "skipped": false
+    },
+    {
+      "model": "SVM",
+      "error": 0.46518838673306395,
+      "alpha": 0.06973605192416,
+      "skipped": false
+    },
+    {
+      "model": "MLP",
+      "error": 0.16316125187767735,
+      "alpha": 0.81744620511826,
+      "skipped": false
+    }
+  ],
+  "results": [
+    {
+      "method": "k-NN",
+      "accuracy": 1.0,
+      "time_ms": 0.4071040093549527
+    },
+    {
+      "method": "Decision Tree",
+      "accuracy": 0.9666666666666667,
+      "time_ms": 0.22562499361811206
+    },
+    {
+      "method": "Naive Bayes",
+      "accuracy": 0.9666666666666667,
+      "time_ms": 0.23739599419059232
+    },
+    {
+      "method": "SVM",
+      "accuracy": 0.9666666666666667,
+      "time_ms": 0.3604375015129335
+    },
+    {
+      "method": "MLP",
+      "accuracy": 1.0,
+      "time_ms": 79.80285400117282
+    },
+    {
+      "method": "Bagging (parallel)",
+      "accuracy": 0.9666666666666667,
+      "time_ms": 82.41499950236175
+    },
+    {
+      "method": "Bagging (sequential)",
+      "accuracy": 0.9666666666666667,
+      "time_ms": 81.98625000659376
+    },
+    {
+      "method": "Boosting (sequential)",
+      "accuracy": 0.9666666666666667,
+      "time_ms": 160.664311995788
+    }
+  ]
+}
